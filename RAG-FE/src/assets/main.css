@@ -1,0 +1,78 @@
+@import './base.css';
+
+#app { min-height: 100vh; }
+
+.workspace-shell { max-width: 1120px; margin: 0 auto; padding: 28px 42px 52px; }
+.topbar, .panel-heading, .form-actions, .workspace-footer, .brand-lockup, .connection-status, .source-item summary { display: flex; align-items: center; }
+.topbar, .panel-heading, .form-actions, .workspace-footer { justify-content: space-between; }
+.index-actions { display: flex; align-items: center; gap: 22px; }
+.brand-lockup { gap: 12px; }
+.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; background: var(--ink); color: var(--paper); font-family: Georgia, serif; font-size: 24px; font-style: italic; }
+.eyebrow, .step-number, .connection-status, .answer-label, .source-count, .workspace-footer > span { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.brand-lockup h1 { font-family: Georgia, serif; font-size: 21px; letter-spacing: -.04em; }
+.connection-status { gap: 8px; }
+.connection-status span { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(60, 148, 113, .12); }
+.intro-block { max-width: 680px; margin: 116px 0 58px; }
+.intro-block h2 { margin: 14px 0 18px; font-family: Georgia, serif; font-size: clamp(42px, 6vw, 76px); font-weight: 400; line-height: .98; letter-spacing: -.055em; }
+.intro-block h2 em { color: var(--rust); font-style: italic; }
+.intro-copy { max-width: 410px; color: var(--muted); font-size: 16px; }
+.query-panel, .answer-panel, .sources-section { border-top: 1px solid var(--line); padding: 22px 0; }
+.panel-heading { margin-bottom: 20px; }
+.panel-heading > div { display: flex; align-items: baseline; gap: 18px; }
+.panel-heading h3 { font-family: Georgia, serif; font-size: 24px; font-weight: 400; }
+.step-number { color: var(--rust); }
+.text-button, .ingest-button { border: 0; background: transparent; color: var(--muted); cursor: pointer; font: inherit; font-size: 12px; }
+.text-button:hover, .ingest-button:hover { color: var(--ink); }
+textarea { display: block; width: 100%; min-height: 58px; resize: none; border: 1px solid var(--line); border-radius: 0; background: rgba(255,255,255,.38); color: var(--ink); padding: 15px 19px; font: inherit; font-size: 18px; outline: none; }
+textarea:focus { border-color: var(--rust); box-shadow: 4px 4px 0 var(--peach); }
+textarea::placeholder { color: #aaa49a; }
+.form-actions { gap: 20px; margin-top: 16px; }
+.hint { color: var(--muted); font-size: 12px; }
+.primary-button { border: 0; background: var(--rust); color: white; cursor: pointer; padding: 13px 18px; font: inherit; font-size: 12px; font-weight: 700; }
+.primary-button span, .ingest-button span { margin-left: 8px; font-size: 16px; }
+.primary-button:hover { background: var(--ink); }
+button:disabled { cursor: wait; opacity: .55; }
+.notice { margin: 4px 0 22px; padding: 12px 15px; font-size: 13px; }
+.error-notice { background: #f7e3df; color: #8e3023; }
+.success-notice { background: #e2f1e8; color: #246b4d; }
+.answer-panel { border-top-color: var(--rust); }
+.answer-label, .source-count { color: var(--rust); letter-spacing: .08em; }
+.answer-copy { max-width: 780px; font-family: Georgia, serif; font-size: 25px; line-height: 1.35; }
+.message { border-top: 1px solid var(--line); padding: 18px 0; }
+.message.user { margin-left: 12%; }
+.message-meta { display: flex; justify-content: space-between; margin-bottom: 9px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.message.user .answer-copy { color: var(--muted); font-family: inherit; font-size: 16px; }
+.markdown-copy p { margin: 0 0 10px; }
+.markdown-copy p:last-child { margin-bottom: 0; }
+.markdown-copy strong { font-weight: 700; }
+.markdown-copy code { background: var(--peach); padding: 2px 5px; font-family: monospace; font-size: .8em; }
+.no-answer { margin-top: 12px; color: var(--rust); font-size: 12px; }
+.message-sources { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; color: var(--rust); font-size: 11px; }
+.message-sources span { border: 1px solid var(--line); padding: 5px 8px; }
+.loading-state { display: flex; gap: 7px; padding: 18px 0; }
+.loading-state span { width: 9px; height: 9px; border-radius: 50%; background: var(--rust); animation: pulse 1s infinite alternate; }
+.loading-state span:nth-child(2) { animation-delay: .2s; }.loading-state span:nth-child(3) { animation-delay: .4s; }
+@keyframes pulse { to { opacity: .2; transform: translateY(-5px); } }
+.source-item { border-top: 1px solid var(--line); padding: 15px 0; }
+.source-item:last-child { border-bottom: 1px solid var(--line); }
+.source-item summary { justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; font-size: 13px; }
+.source-item summary::-webkit-details-marker { display: none; }
+.source-item summary span:last-child { color: var(--muted); font-size: 11px; }
+.source-item summary b { color: var(--rust); font-size: 15px; }
+.source-item p { max-width: 800px; margin: 14px 0 2px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.workspace-footer { margin-top: 52px; border-top: 1px solid var(--line); padding-top: 18px; }
+.ingest-button { color: var(--rust); font-weight: 700; }
+.upload-button { color: var(--ink); cursor: pointer; font-size: 12px; font-weight: 700; }
+.upload-button:hover { color: var(--rust); }
+.upload-button.disabled { cursor: wait; opacity: .55; }
+.upload-button input { display: none; }
+.documents-section { margin-top: 48px; border-top: 1px solid var(--line); padding-top: 22px; }
+.document-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding: 15px 0; }
+.document-row:last-child { border-bottom: 1px solid var(--line); }
+.document-row strong, .document-row span { display: block; }
+.document-row strong { font-size: 13px; font-weight: 700; }
+.document-row div > span { margin-top: 4px; color: var(--muted); font-size: 11px; }
+.document-actions { display: flex; align-items: center; gap: 18px; }
+.delete-button { border: 0; background: transparent; color: var(--rust); cursor: pointer; font: inherit; font-size: 12px; }
+.delete-button:hover { color: var(--ink); }
+@media (max-width: 650px) { .workspace-shell { padding: 22px 20px 38px; } .intro-block { margin: 76px 0 42px; } .intro-block h2 { font-size: 48px; } .connection-status { display: none; } .form-actions { align-items: flex-start; flex-direction: column; } .answer-copy { font-size: 21px; } .message.user { margin-left: 0; } .source-item summary { align-items: flex-start; flex-direction: column; gap: 5px; } }
